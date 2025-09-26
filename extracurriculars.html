@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <style>
         :root {
@@ -116,7 +117,7 @@
         overflow: hidden;
         /* Optional: limit to 3 lines with ellipsis */
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        
         -webkit-box-orient: vertical;
     }
     
@@ -150,17 +151,6 @@
             -webkit-line-clamp: 2;  /* Show fewer lines on mobile */
         }
     }
-        .read-more {
-            display: inline-block;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-        .read-more:hover {
-            color: #005bd3;
-            text-decoration: underline;
-        }
         .section-header {
             text-align: center;
             margin-bottom: 50px;
@@ -253,7 +243,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#">Extracurriculars</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
                 </ul>
             </div>
         </div>
@@ -287,7 +277,541 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Blog Posts -->
+    <div class="container">
+        <div class="row" id="blog-posts">
+            <!-- Yale Young Global Scholar -->
+            <div class="col-md-4 blog-post-item" data-categories="education,international">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Yale\ Young\ Global\ Scholar.jpg');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">Yale Young Global Scholar</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-university"></i> International Education | July 2025
+                        </div>
+                        <p class="blog-post-excerpt">In the summer of 2025, I will be participating in the Yale Young Global Scholars summer school. I have chosen the Innovations in Science and Technology session and am eager to learn and contribute to the YYGS community.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Prilika Za Tebe -->
+            <div class="col-md-4 blog-post-item" data-categories="community,leadership">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Prilika\ Za\ Tebe\ Initiative.jpg');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">Prilika Za Tebe Initiative</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-hands-helping"></i> Youth Empowerment | April 2025 - May 2025
+                        </div>
+                        <p class="blog-post-excerpt">Prilika Za Tebe is a mobile application that uses a custom API to search the web and find Erasmus projects to display within the app. The goal of the application is to promote non-formal education for people living in the Balkans as it plays an important role in education.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CARS ON SOLANA -->
+            <div class="col-md-4 blog-post-item" data-categories="technology,cryptocurrency">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Cars\ 3D\ Website.png');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">Cars 3D Website</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-code"></i> Blockchain Development | March 2025
+                        </div>
+                        <p class="blog-post-excerpt">After learning how to create 3D models, I decided to start a small and fun project that utilized both my 3D modeling and programming knowledge.</p>
+                        <a href="https://cars3dwebsite.github.io/Cars3D-Website/" class="read-more">Check Out the Website</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- COMPUTER SCIENCE CAS LEADER -->
+            <div class="col-md-4 blog-post-item" data-categories="technology,education">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Computer\ Science\ CAS\ Leadership.png');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">Computer Science CAS Leadership</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-laptop-code"></i> Technical Leadership | March 2025 - Present
+                        </div>
+                        <p class="blog-post-excerpt">Leading the Computer Science CAS has been an amazing adventure as I have had the opportunity to show others my passion for computer science and revise some beginner knowledge, refining my own even more.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MUN IUS -->
+            <div class="col-md-4 blog-post-item" data-categories="international,leadership">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Model\ United\ Nations\ at\ IUS.jpg');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">Model United Nations at IUS</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-globe-americas"></i> International Relations | February 2025
+                        </div>
+                        <p class="blog-post-excerpt">During this MUN, I represented Brazil in the Special Political & Decolonisation Committee. It was my first ever Model United Nations and was an amazing experience that taught me a lot about global politics and debating.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MF DOOM MASK -->
+            <div class="col-md-4 blog-post-item" data-categories="arts,crafts">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/MF\ DOOM\ Mask\ Art\ Project.jpg');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">MF DOOM Mask Art Project</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-mask"></i> Creative Arts | October 2024
+                        </div>
+                        <p class="blog-post-excerpt">For Halloween, as a big fan of the rapper MF DOOM, I wanted to dress up as him. This was an issue as he wore a mask that was impossibly hard to find. Therefore, I learned how to 3D model and created my own mask which turned out great!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- German Olympiad 2024 -->
+            <div class="col-md-4 blog-post-item" data-categories="language,education">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/German\ Language\ Olympiad\ 2024.jpg');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">German Language Olympiad 2024</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-language"></i> Language Achievement | May 2024
+                        </div>
+                        <p class="blog-post-excerpt">The German Olympiad is the highest level of competition in the German language. Being a participant was an honor.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MTEL Regional APP COMPETITION -->
+            <div class="col-md-4 blog-post-item" data-categories="technology,competition">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/MTEL\ Regional\ App\ Competition.jpg');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">MTEL Regional App Competition</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-trophy"></i> Technology Competition | April 2024
+                        </div>
+                        <p class="blog-post-excerpt">With my application StudyBuddy, I competed in the regional MTEL App Competition. I was awarded an honorable mention for my application as it was close to placing in the top 3 in the Balkan region.</p>
+                        <a href="https://apptakmicenje.mtel.ba/prethodni-ciklusi-pregled/7-m-tel-app-takmicenje" class="read-more">Continue Reading</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Prilike za mlade GoraÅ¾de -->
+            <div class="col-md-4 blog-post-item" data-categories="leadership,community">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Prilike\ za\ mlade\ GoraÅ¾de.jpg');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">Prilike za mlade Goražde</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-project-diagram"></i> Project Management | April 2024 - July 2024
+                        </div>
+                        <p class="blog-post-excerpt">The project Prilike za mlade Goražde was part of my initiative to promote non-formal education and workshops in smaller towns in BiH. During this project, high school students from my town were able to organize their own workshops on whatever topics they wished to speak about. This promoted peer-to-peer learning and started a club in my school.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Youth Exchange Kaleidoscope -->
+            <div class="col-md-4 blog-post-item" data-categories="international,community">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Kaleidoscope\ A\ Multicultural\ Journey.png');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">Kaleidoscope: A Multicultural Journey</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-people-arrows"></i> International Exchange | December 2023 - April 2024
+                        </div>
+                        <p class="blog-post-excerpt">Kaleidoscope is an Erasmus+ project that was hosted by Bravo BiH and promoted diversity. It was an unforgettable experience where I learned much about the culture of the people from the Canary Islands and got to share much of my Kurdish and Bosnian culture.</p>
+                        <a href="https://bravo-bih.com/testimonials-for-ye-kaleidoscope-sarajevo-bih/" class="read-more">Read an Article</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Youth Leader -->
+            <div class="col-md-4 blog-post-item" data-categories="leadership,community">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Youth\ Leader\ in\ KUM\ project.jpg');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">Youth Leader in KUM Project</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-user-tie"></i> Leadership Development | June 2024 - August 2024
+                        </div>
+                        <p class="blog-post-excerpt">As a member of the Youth Cultural Association, during our biggest project backed by the EU initiative Reload, I was tasked with being a youth leader. This meant that I was responsible for gathering and taking care of youth who participated in the project. This improved my PR skills and leadership abilities.</p>
+                        <a href="https://www.instagram.com/kum_gorazde/" class="read-more">Check Out My PR Work</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- StudyBuddy -->
+            <div class="col-md-4 blog-post-item" data-categories="education,technology">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/StudyBuddyPeer\ Learning\ Initiative.jpg');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">StudyBuddy: Peer Learning Initiative</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-graduation-cap"></i> Education Technology | February 2024
+                        </div>
+                        <p class="blog-post-excerpt">Creating a mobile app that helps high school students track their grades and tasks has improved my programming and problem-solving skills.</p>
+                        <a href="https://www.klix.ba/vijesti/bih/srednjoskolac-iz-gorazda-runi-baker-osmislio-study-buddy-aplikaciju-s-kojom-se-lakse-uci/240218036" class="read-more">Read an Article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Omladinska Banka PR -->
+            <div class="col-md-4 blog-post-item" data-categories="community,leadership">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/PR\ for\ Omladinska\ Banka.jpg');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">PR for Omladinska Banka</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-bullhorn"></i> Community Development | January 2024 - May 2024
+                        </div>
+                        <p class="blog-post-excerpt">Managing the Instagram account for Omladinska Banka Goražde has allowed me to promote initiatives started by youth and practice my PR skills.</p>
+                        <a href="https://www.instagram.com/omladinskabankagorazde/" class="read-more">Check Out My PR Work</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nekropola Gorsic Polje -->
+            <div class="col-md-4 blog-post-item" data-categories="history,conservation">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Documenting\ Nekropola\ Gorsic\ Polje.png');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">Documenting Nekropola Goršić Polje</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-landmark"></i> Cultural Heritage | November 2023
+                        </div>
+                        <p class="blog-post-excerpt">For a competition organized by the Federal Ministry of Education in BiH, I wrote the scenario, directed, and was the main speaker for a documentary about the Necropolis Goršić Polje, which was forgotten.</p>
+                        <a href="https://www.youtube.com/watch?v=JErhSEHaQMk" class="read-more">Watch a Video</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Altteatar Gluma Predstave -->
+            <div class="col-md-4 blog-post-item" data-categories="arts,performance">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Performances\ with\ Altteatar.jpg');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">Performances with Altteatar</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-theater-masks"></i> Theatre Arts | 2019 - October 2023
+                        </div>
+                        <p class="blog-post-excerpt">Acting in productions with Altteatar, an association of actors in BiH, has helped me understand theatre and its intentions better. Working with well-known Bosnian actors has improved my acting skills significantly.</p>
+                        <a href="https://altteatar.com/projekt/hocemo-l-vise-1-0-i-2-0/" class="read-more">Read an Article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OSCE Predstava -->
+            <div class="col-md-4 blog-post-item" data-categories="arts,advocacy">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Cujes\ li\ korake\ iza\ sebeTheatre\ Performance.png');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">"Čuješ li korake iza sebe?" Theatre Performance</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-theater-masks"></i> Performance Art | August 2023
+                        </div>
+                        <p class="blog-post-excerpt">Participating in a theatrical performance organized by OSCE. This theatre performance was written based on fears and emotional events from the actors' lives. Acting it out helped me understand my emotions and made me feel more at ease about the event.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kamp Konjic -->
+            <div class="col-md-4 blog-post-item" data-categories="community,outdoor">
+                <div class="blog-post">
+                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Summer\ Camp\ Konjic.jpg');"></div>
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">Summer Camp Konjic</h3>
+                        <div class="blog-post-meta">
+                            <i class="fas fa-campground"></i> Youth Development | August 2023
+                        </div>
+                        <p class="blog-post-excerpt">Participating in an immersive outdoor camp experience in Konjic, developing leadership skills, and continuing to work with the organizers "KULT" to organize a youth dialogue in my town.</p>
+                        <a href="https://mladi.org/ljetni-kamp-aktivizma-u-zajednici-sta-smo-naucili/" class="read-more">Read an Article</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Teatar Fedra -->
+                <div class="col-md-4 blog-post-item" data-categories="arts,advocacy">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/Theatre\ PerformanceThe\ Awakening\ of\ Spring\ at\ FEDRA.png');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Theatre Performance: The Awakening of Spring at FEDRA</h3>
+                            <div class="blog-post-meta">
+                                <i class="fas fa-globe"></i> Theatre Arts | July 2023
+                            </div>
+                            <p class="blog-post-excerpt">During the biggest amateur theatre festival FEDRA (51st), I was invited to play a significant role in the play "The Awakening of Spring." This was an amazing experience as I got the chance to perform in front of a very large audience and show my acting skills in the best light.</p>
+                            <a href="https://bljesak.info/kultura/kazaliste/mladi-iz-brckog-bugojna-i-gorazda-pronasli-svoj-glas-kroz-teatar/426924" class="read-more">Read an Article</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Goethe Institut Stipendium -->
+                <div class="col-md-4 blog-post-item" data-categories="international,language">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/Goethe\ Institut\ Munich\ Summer\ School.jpg');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Goethe Institut Munich Summer School</h3>
+                            <div class="blog-post-meta">
+                                <i class="fas fa-globe"></i> International Experience | June 2023 - July 2023
+                            </div>
+                            <p class="blog-post-excerpt">I participated in a summer school in Munich hosted by Goethe Institut where I learned about German, Macedonian, and Serbian culture. I also participated in German classes at the German Institut and finished the B2 course of German.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- German Olympiad 2023 -->
+                <div class="col-md-4 blog-post-item" data-categories="language,education">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/German\ Language\ Olympiad\ 2023.png');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">German Language Olympiad 2023</h3>
+                            <div class="blog-post-meta">
+                                <i class="fas fa-language"></i> Language Achievement | May 2023
+                            </div>
+                            <p class="blog-post-excerpt">I competed in the national German Olympiad and placed 4th.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- OSCE Research -->
+                <div class="col-md-4 blog-post-item" data-categories="research,international">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/OSCE\ Research\ Initiative.png');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">OSCE Research Initiative</h3>
+                            <div class="blog-post-meta">
+                                <i class="fas fa-search"></i> Social Research | May 2023
+                            </div>
+                            <p class="blog-post-excerpt">Participating in research projects with the Organization for Security and Co-operation in Europe, examining social issues affecting youth, primarily focusing on education. Working with a professional, I have learned a lot about surveying and helped solve a problem in my school.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- ReciklirajBA -->
+                <div class="col-md-4 blog-post-item" data-categories="environment,community">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/ReciklirajBAEnvironmental\ Action.jpg');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">ReciklirajBA: Environmental Action</h3>
+                            <div class="blog-post-meta">
+                                <i class="fas fa-recycle"></i> Environmental Initiative | May 2023
+                            </div>
+                            <p class="blog-post-excerpt">Creating a mobile application that informs citizens of Goražde about how to recycle, where to recycle, and what to recycle. Along with the mobile application, I placed 20 recycling cans within my city and started a recycling system in Goražde.</p>
+                            <a href="https://www.klix.ba/scitech/tehnologija/mladi-gorazdanin-runi-baker-osmislio-aplikaciju-za-reciklazu-otpada/230521110#google_vignette" class="read-more">Read an Article</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- History Competition -->
+                <div class="col-md-4 blog-post-item" data-categories="education,history">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/History\ Competition\ Third\ place.jpg');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">History Competition Third Place</h3>
+                            <div class="blog-post-meta">
+                                <i class="fas fa-book-open"></i> Academic Achievement | March 2023
+                            </div>
+                            <p class="blog-post-excerpt">Competing in and placing third in a history competition.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- ASU BiH Participant -->
+                <div class="col-md-4 blog-post-item" data-categories="education,leadership">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/ASU\ BiH\ participant.png');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">ASU BiH Participant</h3>
+                            <div class="blog-post-meta">
+                                <i class="fas fa-hands-helping"></i> Leadership Development | September 2022 - May 2024
+                            </div>
+                            <p class="blog-post-excerpt">Participating in the Association of High School Students in Bosnia by volunteering, helping raise funds, and promoting their initiatives.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Rimski Most na Kozetini -->
+                <div class="col-md-4 blog-post-item" data-categories="history,conservation">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/Documenting\ the\ Roman\ Bridge\ at\ Kozetina.png');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Documenting the Roman Bridge at Kozetina</h3>
+                            <div class="blog-post-meta">
+                                <i class="fas fa-archway"></i> Historical Research | September 2022
+                            </div>
+                            <p class="blog-post-excerpt">Writing the script, directing, and being the main speaker of the documentary "Rimski Most na Kozetini." The documentary was submitted to a competition hosted by the Ministry of Education in Bosnia and placed 4th overall.</p>
+                            <a href="https://www.youtube.com/watch?v=OpiAma-K8QQ" class="read-more">Watch a Video</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Project CIVITAS Winner -->
+                <div class="col-md-4 blog-post-item" data-categories="community,education,leadership">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/Project\ CIVITAS\ Winner.png');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Project CIVITAS Winner</h3>
+                            <div class="blog-post-meta">
+                                <i class="fas fa-award"></i> Civic Education | May 2022
+                            </div>
+                            <p class="blog-post-excerpt">Winning the CIVITAS project as the leader of our group with the topic of solving the stray dogs problem in Goražde allowed me to improve my problem-solving skills, communication skills, and leadership abilities.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Hope English Centre Volunteer -->
+                <div class="col-md-4 blog-post-item" data-categories="language,community">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/Translating\ at\ Hope\ English\ Centre.jpg');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Translating at Hope English Centre</h3>
+                            <div class="blog-post-meta">
+                                <i class="fas fa-chalkboard-teacher"></i> Volunteer Translation | June 2022 - Present
+                            </div>
+                            <p class="blog-post-excerpt">Every single summer, I volunteer at a summer camp in Goražde that is hosted by an organization from the United States. The foundation brings students from the US to our town and teaches young children English. I usually work in the music department, translating and singing with kids!</p>
+                            <a href="https://www.youtube.com/watch?v=6Ik7jMnHjS8" class="read-more">Watch a Video</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Microbit Reciklaza -->
+                <div class="col-md-4 blog-post-item" data-categories="technology,environment">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/Smart\ Recycling\ with\ Microbit.png');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Smart Recycling with Micro:bit</h3>
+                            <div class="blog-post-meta">
+                                <i class="fas fa-microchip"></i> Tech Innovation | April 2023
+                            </div>
+                            <p class="blog-post-excerpt">In close coordination with my friend Danis, we created a smart recycling can that would set a goal for how many plastic bottles should be recycled into it. This project was also presented at a competition hosted by the UK Embassy and placed in the top 25 out of hundreds of contraptions.</p>
+                            <a href="https://www.youtube.com/watch?v=2k9ERkfhL2c" class="read-more">Watch a Video</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- UWC Acting Project -->
+                <div class="col-md-4 blog-post-item" data-categories="arts,international">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/UWC\ Mostar\ Acting\ Project\ Education\ in\ Action.jpg');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">UWC Mostar Acting Project: Education in Action</h3>
+                            <div class="blog-post-meta">
+                                <i class="fas fa-theater-masks"></i> Arts & International | April 2022
+                            </div>
+                            <p class="blog-post-excerpt">Through a project coordinated by the foundation "Education and Action," a few of my peers and I were able to create a small short skit that promoted anti-bullying and acted it out in Sarajevo and Mostar, meeting many UWC students. This made me fall in love with UWC Mostar.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Microbit Dog -->
+                <div class="col-md-4 blog-post-item" data-categories="technology,innovation">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/Microbit\ stray\ dog\ safety\ Project.png');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Micro:bit Stray Dog Safety Project</h3>
+                            <div class="blog-post-meta">
+                                <i class="fas fa-robot"></i> Creative Technology | February 2022
+                            </div>
+                            <p class="blog-post-excerpt">Working closely with my friend Danis, we created a contraption controlled by a micro:bit that helped fix the safety issue of stray dogs in our town. It was presented at a competition hosted by the UK Embassy in BiH and placed in the top 10 best contraptions from hundreds of applications.</p>
+                            <a href="https://m.youtube.com/watch?v=pz2hlF081Ck" class="read-more">Watch a Video</a>
+                        </div>
+                    </div>
+                </div>
+    
+                 <!-- European night of Research -->
+                 <div class="col-md-4 blog-post-item" data-categories="arts,community">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/European\ Research\ Night.png');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">European Research Night</h3>
+                            <div class="blog-post-meta">
+                                <i class="fas fa-music"></i> Creative Music | May 2021
+                            </div>
+                            <p class="blog-post-excerpt">I was a participant in the European Research Night where I got to show off my knowledge of classical and electric guitar.</p>
+                            <a href="https://www.youtube.com/watch?v=QnUYLzqWKJU" class="read-more">Watch a Video</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- KROS Running Winner -->
+                <div class="col-md-4 blog-post-item" data-categories="sports,community">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/KROS\ Running\ Competition\ Winner.jpg');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">KROS: Running Competition Winner</h3>
+                            <div class="blog-post-meta">
+                                <i class="fas fa-running"></i> Sports Achievement | May 2021
+                            </div>
+                            <p class="blog-post-excerpt">Taking part in an 800-meter race with my peers and placing first was a way of showing my healthy lifestyle outside of school.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Youth Cultural Association Member -->
+                <div class="col-md-4 blog-post-item" data-categories="arts,community">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/Youth\ Cultural\ Association\ Member.jpg');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Youth Cultural Association Member</h3>
+                            <div class="blog-post-meta">
+                                <i class="fas fa-paint-brush"></i> Cultural Activities | December 2019 - Present
+                            </div>
+                            <p class="blog-post-excerpt">As one of the 10 members of the Youth Cultural Association (KUM Goražde), I have been able to contribute to my local community by helping plan, coordinate, and execute projects in my local area. This association allowed me to enroll in many camps, youth exchanges, and summer programs.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- YouTube Channel -->
+                <div class="col-md-4 blog-post-item" data-categories="media,technology">
+                    <div class="blog-post">
+                        <div class="blog-post-image" style="background-image: url('extracurricular-images/aktivna\ tehnologija\ youtubechannelcreatingcontent.jpg');"></div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Aktivna Tehnologija YouTube Channel: Creating Content</h3>
+                            <div class="blog-post-meta">
+                                <i class="fab fa-youtube"></i> Digital Media | September 2019 - June 2022
+                            </div>
+                            <p class="blog-post-excerpt">Developing and producing content for a YouTube channel called Aktivna Tehnologija has taught me a lot about planning videos, editing, and filming, which came in handy in later developed projects.</p>
+                            <a href="https://www.youtube.com/@aktivnatehnologija1015" class="read-more">Check Out the YouTube Channel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Contact Section -->
+        <section id="contact" class="container contact-section py-5">
+            <h2 class="section-title">Contact Information</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="contact-card">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h5>Email</h5>
+                                    <p>roni.baker@uwcmostar.ba</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h5>Phone</h5>
+                                    <p>+387 619 50266</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h5>Address</h5>
+                                    <p>Zdravstvenih radnika 20, 73101 Goražde</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>All rights reserved: Roni (Runi) Baker</p>
+        </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize header carousel
@@ -332,540 +856,3 @@
     </script>
 </body>
 </html>
-
-    <!-- Blog Posts -->
-    <div class="container">
-        <div class="row" id="blog-posts">
-            <!-- Yale Young Global Scholar -->
-            <div class="col-md-4 blog-post-item" data-categories="education,international">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Yale\ Young\ Global\ Scholar.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Yale Young Global Scholar</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-university"></i> International Education | July 2025
-                        </div>
-                        <p class="blog-post-excerpt">In the summer of 2025, I will be participating in the Yale Young Global Scholars summer school. I have chosen the Innovations in Science and Technology session and am eager to learn and contribute to the YYGS community.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Prilika Za Tebe -->
-            <div class="col-md-4 blog-post-item" data-categories="community,leadership">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Prilika\ Za\ Tebe\ Initiative.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Prilika Za Tebe Initiative</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-hands-helping"></i> Youth Empowerment | April 2025 - May 2025
-                        </div>
-                        <p class="blog-post-excerpt">Prilika Za Tebe is a mobile application that uses a custom api to look through the web and find erasmus projects and display them inside of the app. The goal of the application is to enforce non formal education to people living in the Balkans as it plays an important role in education.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- CARS ON SOLANA -->
-            <div class="col-md-4 blog-post-item" data-categories="technology,cryptocurrency">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Cars\ 3D\ Website.png');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Cars 3D Website</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-code"></i> Blockchain Development | March 2025
-                        </div>
-                        <p class="blog-post-excerpt">After learning how to create 3D models, I decided to start a small and fun project that both my 3D modeling knowledge and programming knowledge contributed to.</p>
-                        <a href="https://cars3dwebsite.github.io/Cars3D-Website/" class="read-more">Checkout the Website</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- COMPUTER SCIENCE CAS LEADER -->
-            <div class="col-md-4 blog-post-item" data-categories="technology,education">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Computer\ Science\ CAS\ Leadership.png');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Computer Science CAS Leadership</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-laptop-code"></i> Technical Leadership | March 2025 - Present
-                        </div>
-                        <p class="blog-post-excerpt">Leading the Computer Science CAS has been an amazing adventure as I have had the opportunity to show others my passion for computer science and revise some beginner knowledge refining my own even more.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- MUN IUS -->
-            <div class="col-md-4 blog-post-item" data-categories="international,leadership">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Model\ United\ Nations\ at\ IUS.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Model United Nations at IUS</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-globe-americas"></i> International Relations | February 2025
-                        </div>
-                        <p class="blog-post-excerpt">During this MUN I represented Brazil in the Special Political & decolonisation comittee. It was my first ever Model United Nations and was an amazing experience that taught me a lot about global politics and debating.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- MF DOOM MASK -->
-            <div class="col-md-4 blog-post-item" data-categories="arts,crafts">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/MF\ DOOM\ Mask\ Art\ Project.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">MF DOOM Mask Art Project</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-mask"></i> Creative Arts | October 2024
-                        </div>
-                        <p class="blog-post-excerpt">For halloween, as a big fan of the rapper MF DOOM, I wanted to dress up as him. This was an issue as he wore a mask that was impossibly hard to find. Therefore, I learnt how to 3D Model and created my own mask which turned out great!</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- German Olympiad 2024 -->
-            <div class="col-md-4 blog-post-item" data-categories="language,education">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/German\ Language\ Olympiad\ 2024.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">German Language Olympiad 2024</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-language"></i> Language Achievement | May 2024
-                        </div>
-                        <p class="blog-post-excerpt">The German Olympiad is the highest level of competition in the German language, being a participant was an honor.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- MTEL Regional APP COMPETITION -->
-            <div class="col-md-4 blog-post-item" data-categories="technology,competition">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/MTEL\ Regional\ App\ Competition.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">MTEL Regional App Competition</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-trophy"></i> Technology Competition | April 2024
-                        </div>
-                        <p class="blog-post-excerpt">With my application StudyBuddy, I competed in the regional MTEL App Compettition. I was awrded an honorable mention for my application as it was close to placing top 3 in the Balkan region.</p>
-                        <a href="https://apptakmicenje.mtel.ba/prethodni-ciklusi-pregled/7-m-tel-app-takmicenje" class="read-more">Continue Reading</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Prilike za mlade Goražde -->
-            <div class="col-md-4 blog-post-item" data-categories="leadership,community">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Prilike\ za\ mlade\ Goražde.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Prilike za mlade Goražde</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-project-diagram"></i> Project Management | April 2024 - July 2024
-                        </div>
-                        <p class="blog-post-excerpt">The project Prilike za mlade Goražde was part of my initiative to promote nonformal educations and workshops in smaller towns in BiH. During this project, highschoolers from my town were able to organise their own workshop on whatever topic they wished to speak about. This promoted peer to peer learning and started a club in my school.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Youth Exchange Kaleidoscope -->
-            <div class="col-md-4 blog-post-item" data-categories="international,community">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Kaleidoscope\ A\ Multicultural\ Journey.png');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Kaleidoscope: A Multicultural Journey</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-people-arrows"></i> International Exchange | December 2023 - April 2024
-                        </div>
-                        <p class="blog-post-excerpt">Kaleidoscope is an Erasmus+ project that was hosted by Bravo BiH and promoted diversity. It was an unforgettable experience where I learnt much about the culture of the people from Canary Islands and got to share much of my Kurdish and Bosnian culture.</p>
-                        <a href="https://bravo-bih.com/testimonials-for-ye-kaleidoscope-sarajevo-bih/" class="read-more">Read an Article</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Youth Leader -->
-            <div class="col-md-4 blog-post-item" data-categories="leadership,community">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Youth\ Leader\ in\ KUM\ project.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Youth Leader in KUM project</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-user-tie"></i> Leadership Development | June 2024 - August 2024
-                        </div>
-                        <p class="blog-post-excerpt">As a member of the Youth Cultural Association, during our bigest project backed by the EU initiative Reload was tasked with being a youth leader. This meant that I was responsible for gathering and taking care of youth that participated in the project. This improved my PR skills and leadership skills.</p>
-                        <a href="https://www.instagram.com/kum_gorazde/" class="read-more">Checkout my PR work</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- StudyBuddy -->
-            <div class="col-md-4 blog-post-item" data-categories="education,technology">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/StudyBuddyPeer\ Learning\ Initiative.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">StudyBuddy: Peer Learning Initiative</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-graduation-cap"></i> Education Technology | February 2024
-                        </div>
-                        <p class="blog-post-excerpt">Creating a mobile app that helps highschoolers track their grades and their tasks has improved my programming and problem solving skills.</p>
-                        <a href="https://www.klix.ba/vijesti/bih/srednjoskolac-iz-gorazda-runi-baker-osmislio-study-buddy-aplikaciju-s-kojom-se-lakse-uci/240218036" class="read-more">Read an Article</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Omladinska Banka PR -->
-            <div class="col-md-4 blog-post-item" data-categories="community,leadership">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/PR\ for\ Omladinska\ Banka.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">PR for Omladinska Banka</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-bullhorn"></i> Community Development | January 2024 - May 2024
-                        </div>
-                        <p class="blog-post-excerpt">Managing the instagram account for Omladinska Banka Goražde has allowed me to promote initatives started by youth and practice my PR skills.</p>
-                        <a href="https://www.instagram.com/omladinskabankagorazde/" class="read-more">Checkout my PR work</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Nekropola Gorsic Polje -->
-            <div class="col-md-4 blog-post-item" data-categories="history,conservation">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Documenting\ Nekropola\ Gorsic\ Polje.png');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Documenting Nekropola Gorsic Polje</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-landmark"></i> Cultural Heritage | November 2023
-                        </div>
-                        <p class="blog-post-excerpt">For a competition organised by the federal ministry of education in BiH, I wrote the scenario, directed and was the meain speaker for a docummentary about the Necropolis Goršić Polje which was forgotten.</p>
-                        <a href="https://www.youtube.com/watch?v=JErhSEHaQMk" class="read-more">Watch a Video</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Altteatar Gluma Predstave -->
-            <div class="col-md-4 blog-post-item" data-categories="arts,performance">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Performances\ with\ Altteatar.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Performances with Altteatar</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-theater-masks"></i> Theatre Arts | 2019 - October 2023
-                        </div>
-                        <p class="blog-post-excerpt">Acting in productions with Altteatar, an association of actors in BiH has helped me understand theatre and the itentions behind it better. Working with well known Bosnian actors has improved my acting skills a lot.</p>
-                        <a href="https://altteatar.com/projekt/hocemo-l-vise-1-0-i-2-0/" class="read-more">Read an Article</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- OSCE Predstava -->
-            <div class="col-md-4 blog-post-item" data-categories="arts,advocacy">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Cujes\ li\ korake\ iza\ sebeTheatre\ Performance.png');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title"> " Čuješ li korake iza sebe? " Theatre Performance</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-theater-masks"></i> Performance Art | August 2023
-                        </div>
-                        <p class="blog-post-excerpt">Participating in a theatrical performance organized by OSCE. This theatre performance was written based on fears and emotional events from the actors lives. Acting it out helped me understand my emotions and made me feel easier about the event.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Kamp Konjic -->
-            <div class="col-md-4 blog-post-item" data-categories="community,outdoor">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Summer\ Camp\ Konjic.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Summer Camp Konjic</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-campground"></i> Youth Development | August 2023
-                        </div>
-                        <p class="blog-post-excerpt">Participating in an immersive outdoor camp experience in Konjic, developing leadership and continuing to work with the Organizators "KULT" organising a youth dialog in my town.</p>
-                        <a href="https://mladi.org/ljetni-kamp-aktivizma-u-zajednici-sta-smo-naucili/" class="read-more">Read an Article</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Teatar Fedra -->
-            <div class="col-md-4 blog-post-item" data-categories="arts,advocacy">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Theatre\ PerformanceThe\ Awakening\ of\ Spring\ at\ FEDRA.png');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Theatre Performance: The Awakening of Spring at FEDRA</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-globe"></i> Theatre Arts| July 2023
-                        </div>
-                        <p class="blog-post-excerpt">During the biggest amateur theatre festival FEDRA (51st) I was invited to play a significant role in the play "The Awakening of Spring", this was an amazing experience as I got the chance the perform in front of a very big audience and show my acting skills in the best light.</p>
-                        <a href="https://bljesak.info/kultura/kazaliste/mladi-iz-brckog-bugojna-i-gorazda-pronasli-svoj-glas-kroz-teatar/426924" class="read-more">Read an Article</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Goethe Institut Stipendium -->
-            <div class="col-md-4 blog-post-item" data-categories="international,language">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Goethe\ Institut\ Munich\ Summer\ School.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Goethe Institut Munich Summer School</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-globe"></i> International Experience | June 2023 - July 2023
-                        </div>
-                        <p class="blog-post-excerpt">I participated in a summer school in Munich hosted by Goethe Institut where I learnt about German, Macedonian and Serbian culture. I also participated in German classes in the German Institut and finished the B2 course of German.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- German Olympiad 2023 -->
-            <div class="col-md-4 blog-post-item" data-categories="language,education">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/German\ Language\ Olympiad\ 2023.png');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">German Language Olympiad 2023</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-language"></i> Language Achievement | May 2023
-                        </div>
-                        <p class="blog-post-excerpt">I competed in the national Geman Olympiad and placing 4th.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- OSCE Istraživanje -->
-            <div class="col-md-4 blog-post-item" data-categories="research,international">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/OSCE\ Research\ Initiative.png');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">OSCE Research Initiative</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-search"></i> Social Research | May 2023
-                        </div>
-                        <p class="blog-post-excerpt">Participating in research projects with the Organization for Security and Co-operation in Europe, examining social issues affecting youth. Primarly focusing on education. Working with a professional, I have learnt a lot about surveying and helped solve a problem in my school.</p>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <!-- ReciklirajBA -->
-            <div class="col-md-4 blog-post-item" data-categories="environment,community">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/ReciklirajBAEnvironmental\ Action.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">ReciklirajBA: Environmental Action</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-recycle"></i> Environmental Initiative | May 2023
-                        </div>
-                        <p class="blog-post-excerpt">Creating a mobile application that informs citizens of Goražde, how to recycle, where to recycle and what to recycle. Along with the mobile application, I placed 20 recycling cans inside of my city and started a recycling system in Goražde.</p>
-                        <a href="https://www.klix.ba/scitech/tehnologija/mladi-gorazdanin-runi-baker-osmislio-aplikaciju-za-reciklazu-otpada/230521110#google_vignette" class="read-more">Read an Article</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- History Competition -->
-            <div class="col-md-4 blog-post-item" data-categories="education,history">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/History\ Competition\ Third\ place.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">History Competition Third place</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-book-open"></i> Academic Achievement | March 2023
-                        </div>
-                        <p class="blog-post-excerpt">Competing in and placing third in a history competition. </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ASU BiH Participant -->
-            <div class="col-md-4 blog-post-item" data-categories="education,leadership">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/ASU\ BiH\ participant.png');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">ASU BiH participant</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-hands-helping"></i> Leadership Development | September 2022 - May 2024
-                        </div>
-                        <p class="blog-post-excerpt">Participating in the Association of highschoolers in Bosnia by volunteering, helping raise funds and promoting their initiatives.</p>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <!-- Rimski Most na Kozetini -->
-            <div class="col-md-4 blog-post-item" data-categories="history,conservation">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Documenting\ the\ Roman\ Bridge\ at\ Kozetina.png');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title"> Documenting the Roman Bridge at Kozetina</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-archway"></i> Historical Research | September 2022
-                        </div>
-                        <p class="blog-post-excerpt">Writting the script, directing and being the main speaker of the docummentary "Rimski Most na Kozetini". The documentary was published to a competition hosted by the ministry of education in Bosnia and placed 4th overall.</p>
-                        <a href="https://www.youtube.com/watch?v=OpiAma-K8QQ" class="read-more">Watch a Video</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project CIVITAS Winner -->
-            <div class="col-md-4 blog-post-item" data-categories="community,education,leadership">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Project\ CIVITAS\ Winner.png');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Project CIVITAS Winner</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-award"></i> Civic Education | May 2022
-                        </div>
-                        <p class="blog-post-excerpt">Winning the CIVITAS project as the leader of our group with the topic of solving the stray dogs problem in Goražde allowed me to improve my problem solving skills, my communication skills and leadership skills. </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Hope English Centre Volunteer -->
-            <div class="col-md-4 blog-post-item" data-categories="language,community">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Translating\ at\ Hope\ English\ Centre.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Translating at Hope English Centre</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-chalkboard-teacher"></i> Volunteer Translation | June 2022 - Present
-                        </div>
-                        <p class="blog-post-excerpt">Every single summer, I volunteer at a summer camp in Goražde that is hosted by an organisation from the United States. The foundation brings students from the US to our town and teaches young children english. I usually work in the music department, translating and signing with kids! </p>
-                        <a href="https://www.youtube.com/watch?v=6Ik7jMnHjS8" class="read-more">Watch a Video</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Microbit Reciklaza -->
-            <div class="col-md-4 blog-post-item" data-categories="technology,environment">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Smart\ Recycling\ with\ Microbit.png');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Smart Recycling with Micro:bit</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-microchip"></i> Tech Innovation | April 2023
-                        </div>
-                        <p class="blog-post-excerpt">In close coordination with my friend Danis, we created a smart recycling can that woudld set a goal for how many plastic bottles should be recycled into it. This project was also presented at a competition hosted by the UK Embassy and placed in the top 25 out of hundreds of contraptions.</p>
-                        <a href="https://www.youtube.com/watch?v=2k9ERkfhL2c" class="read-more">Watch a Video</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- UWC Acting Project -->
-            <div class="col-md-4 blog-post-item" data-categories="arts,international">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/UWC\ Mostar\ Acting\ Project\ Education\ in\ Action.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">UWC Mostar Acting Project: Education in Action</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-theater-masks"></i> Arts & International | April 2022
-                        </div>
-                        <p class="blog-post-excerpt">Through a project coordinated by the foundation "Education and Action", a few of my peers and i were able to create a small short skit that promoted anti bullying and acted it out in Sarajevo and Mostar, meeting many UWC students. This has made me fall in love with UWC Mostar.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Microbit Dog -->
-            <div class="col-md-4 blog-post-item" data-categories="technology,innovation">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Microbit\ stray\ dog\ safety\ Project.png');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Micro:bit stray dog safety Project</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-robot"></i> Creative Technology | February 2022
-                        </div>
-                        <p class="blog-post-excerpt">Working closely with my friend Danis, we created a contraption controlled by a micro:bit that helped fix the stafety issue of stray dogs in our town. It was presented at a competition hosted by the UK Embassy in BiH and placed in the top 10 best contraptions from hundreds of applications.</p>
-                        <a href="https://m.youtube.com/watch?v=pz2hlF081Ck" class="read-more">Watch a Video</a>
-                    </div>
-                </div>
-            </div>
-
-             <!-- European night of Research -->
-             <div class="col-md-4 blog-post-item" data-categories="sports,community">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/European\ Research\ Night.png');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">European Research Night</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-running"></i> Creative Music | May 2021
-                        </div>
-                        <p class="blog-post-excerpt">I was a participant in the European Research Night where I got to show off my knowlege of classical and electric guitar.</p>
-                        <a href="https://www.youtube.com/watch?v=QnUYLzqWKJU" class="read-more">Watch a Video</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- KROS Running Winner -->
-            <div class="col-md-4 blog-post-item" data-categories="sports,community">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/KROS\ Running\ Competition\ Winner.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">KROS: Running Competition Winner</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-running"></i> Sports Achievement | May 2021
-                        </div>
-                        <p class="blog-post-excerpt">Taking part of an 800 meter race with my peers and placing first was a way of showing my healthy lifestyle outside of school.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Clan Kulturnog udruzenja mladih -->
-            <div class="col-md-4 blog-post-item" data-categories="arts,community">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/Youth\ Cultural\ Association\ Member.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Youth Cultural Association Member</h3>
-                        <div class="blog-post-meta">
-                            <i class="fas fa-paint-brush"></i> Cultural Activities | December 2019 - Present
-                        </div>
-                        <p class="blog-post-excerpt">As one of the 10 members of the Youth Cultural Association (KUM Goražde) I have been able to contribute to my local community by helping plan,coordinate and execute projects in my local area. This association allowed me to enroll into many camps, youth exchanges and summer programs.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Emin YouTube Channel -->
-            <div class="col-md-4 blog-post-item" data-categories="media,technology">
-                <div class="blog-post">
-                    <div class="blog-post-image" style="background-image: url('extracurricular-images/aktivna\ tehnologija\ youtubechannelcreatingcontent.jpg');"></div>
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title"> Aktivna Tehnologija YouTube Channel: Creating Content</h3>
-                        <div class="blog-post-meta">
-                            <i class="fab fa-youtube"></i> Digital Media | September 2019 - June 2022
-                        </div>
-                        <p class="blog-post-excerpt">Developing and producing content for a youtube channel called Aktivna Tehnologija has taught me a lot about planning videos, editing and filming which came in handy in later developed projects.</p>
-                        <a href="https://www.youtube.com/@aktivnatehnologija1015" class="read-more">Checkout the Youtube Channel</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-    <section id="contact" class="container contact-section py-5">
-        <h2 class="section-title">Contact Information</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="contact-card">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h5>Email</h5>
-                                <p>roni.baker@uwcmostar.ba</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h5>Phone</h5>
-                                <p>+387 619 50266</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h5>Address</h5>
-                                <p>Zdravstvenih radnika 20, 73101 Goražde</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-            <!-- Footer -->
-            <div class="footer">
-                <p>All rights: Roni (Runi) Baker</p>
-            </div>
