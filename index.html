@@ -481,7 +481,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     
     <script>
-        // PDF Download functionality using client-side generation
+        // PDF Download functionality - captures full webpage
         document.getElementById('downloadResumeBtn').addEventListener('click', async function() {
             const btn = this;
             const originalText = btn.innerHTML;
@@ -492,97 +492,144 @@
             
             try {
                 const { jsPDF } = window.jspdf;
-                const pdf = new jsPDF('p', 'mm', 'a4');
                 
-                // Get the main content areas
-                const mainContent = document.querySelector('body');
-                
-                // Create a temporary container for PDF content
-                const pdfContainer = document.createElement('div');
-                pdfContainer.style.width = '210mm';
-                pdfContainer.style.backgroundColor = 'white';
-                pdfContainer.style.padding = '10mm';
-                
-                // Clone the content
-                pdfContainer.innerHTML = mainContent.innerHTML;
-                
-                // Remove navigation
-                const nav = pdfContainer.querySelector('nav');
-                if (nav) nav.remove();
-                
-                // Remove the download button
-                const downloadBtn = pdfContainer.querySelector('#downloadResumeBtn');
-                if (downloadBtn) downloadBtn.closest('li').remove();
-                
-                // Add to document temporarily
-                pdfContainer.style.position = 'absolute';
-                pdfContainer.style.left = '-9999px';
-                document.body.appendChild(pdfContainer);
-                
-                // Convert to canvas
-                const canvas = await html2canvas(pdfContainer, {
-                    scale: 2,
-                    useCORS: true,
-                    logging: false,
-                    allowTaint: true
-                });
-                
-                // Remove temporary container
-                document.body.removeChild(pdfContainer);
-                
-                // Add to PDF
-                const imgData = canvas.toDataURL('image/jpeg', 1.0);
-                const pdfWidth = pdf.internal.pageSize.getWidth();
-                const pdfHeight = pdf.internal.pageSize.getHeight();
-                const imgWidth = canvas.width;
-                const imgHeight = canvas.height;
-                const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
-                
-                pdf.addImage(imgData, 'JPEG', 0, 0, imgWidth * ratio, imgHeight * ratio);
-                
-                // If we need to fetch extracurriculars page
-                try {
-                    const response = await fetch('extracurriculars.html');
-                    const html = await response.text();
+                // Function to capture a full page
+                async function capturePage(url) {
+                    let content;
                     
-                    // Create container for extracurriculars
-                    const extraContainer = document.createElement('div');
-                    extraContainer.style.width = '210mm';
-                    extraContainer.style.backgroundColor = 'white';
-                    extraContainer.style.padding = '10mm';
-                    extraContainer.innerHTML = html;
+                    if (url === window.location.href || url.includes('index.html') || url === '') {
+                        // Current page (index.html)
+                        content = document.body.cloneNode(true);
+                    } else {
+                        // Fetch extracurriculars page
+                        const response = await fetch(url);
+                        const html = await response.text();
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        content = doc.body.cloneNode(true);
+                    }
                     
-                    // Remove navigation from extracurriculars
-                    const extraNav = extraContainer.querySelector('nav');
-                    if (extraNav) extraNav.remove();
+                    // Remove navigation and download button
+                    const nav = content.querySelector('nav');
+                    if (nav) nav.remove();
                     
-                    // Add to document temporarily
-                    extraContainer.style.position = 'absolute';
-                    extraContainer.style.left = '-9999px';
-                    document.body.appendChild(extraContainer);
+                    const downloadBtn = content.querySelector('#downloadResumeBtn');
+                    if (downloadBtn) downloadBtn.closest('li')?.remove();
                     
-                    // Convert to canvas
-                    const extraCanvas = await html2canvas(extraContainer, {
+                    // Create temporary container with proper styling
+                    const container = document.createElement('div');
+                    container.style.position = 'absolute';
+                    container.style.left = '-9999px';
+                    container.style.top = '0';
+                    container.style.width = '1200px'; // Fixed width for consistency
+                    container.style.backgroundColor = '#f8f9fa';
+                    container.appendChild(content);
+                    
+                    // Copy all stylesheets to the container
+                    const styles = Array.from(document.styleSheets)
+                        .map(sheet => {
+                            try {
+                                return Array.from(sheet.cssRules)
+                                    .map(rule => rule.cssText)
+                                    .join('\n');
+                            } catch (e) {
+                                return '';
+                            }
+                        })
+                        .join('\n');
+                    
+                    const styleElement = document.createElement('style');
+                    styleElement.textContent = styles;
+                    container.insertBefore(styleElement, container.firstChild);
+                    
+                    document.body.appendChild(container);
+                    
+                    // Wait for images to load
+                    const images = container.querySelectorAll('img');
+                    await Promise.all(Array.from(images).map(img => {
+                        if (img.complete) return Promise.resolve();
+                        return new Promise(resolve => {
+                            img.onload = resolve;
+                            img.onerror = resolve;
+                        });
+                    }));
+                    
+                    // Capture with html2canvas
+                    const canvas = await html2canvas(container, {
                         scale: 2,
                         useCORS: true,
+                        allowTaint: true,
                         logging: false,
-                        allowTaint: true
+                        width: 1200,
+                        windowWidth: 1200,
+                        backgroundColor: '#f8f9fa'
                     });
                     
-                    // Remove temporary container
-                    document.body.removeChild(extraContainer);
-                    
-                    // Add new page
-                    pdf.addPage();
-                    
-                    const extraImgData = extraCanvas.toDataURL('image/jpeg', 1.0);
-                    pdf.addImage(extraImgData, 'JPEG', 0, 0, extraCanvas.width * ratio, extraCanvas.height * ratio);
-                    
-                } catch (extraError) {
-                    console.log('Could not load extracurriculars page:', extraError);
+                    document.body.removeChild(container);
+                    return canvas;
                 }
                 
-                // Save the PDF
+                // Capture index page
+                const indexCanvas = await capturePage('');
+                
+                // Create PDF
+                const pdf = new jsPDF({
+                    orientation: 'portrait',
+                    unit: 'mm',
+                    format: 'a4'
+                });
+                
+                // Calculate dimensions
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const pdfHeight = pdf.internal.pageSize.getHeight();
+                
+                // Add index page - multiple pages if needed
+                const imgWidth = pdfWidth;
+                const imgHeight = (indexCanvas.height * imgWidth) / indexCanvas.width;
+                
+                let heightLeft = imgHeight;
+                let position = 0;
+                
+                const indexImgData = indexCanvas.toDataURL('image/jpeg', 0.95);
+                
+                // Add first page
+                pdf.addImage(indexImgData, 'JPEG', 0, position, imgWidth, imgHeight);
+                heightLeft -= pdfHeight;
+                
+                // Add additional pages if content is longer than one page
+                while (heightLeft > 0) {
+                    position = heightLeft - imgHeight;
+                    pdf.addPage();
+                    pdf.addImage(indexImgData, 'JPEG', 0, position, imgWidth, imgHeight);
+                    heightLeft -= pdfHeight;
+                }
+                
+                // Try to add extracurriculars page
+                try {
+                    const extraCanvas = await capturePage('extracurriculars.html');
+                    
+                    const extraImgHeight = (extraCanvas.height * imgWidth) / extraCanvas.width;
+                    const extraImgData = extraCanvas.toDataURL('image/jpeg', 0.95);
+                    
+                    heightLeft = extraImgHeight;
+                    position = 0;
+                    
+                    pdf.addPage();
+                    pdf.addImage(extraImgData, 'JPEG', 0, position, imgWidth, extraImgHeight);
+                    heightLeft -= pdfHeight;
+                    
+                    // Add additional pages for extracurriculars if needed
+                    while (heightLeft > 0) {
+                        position = heightLeft - extraImgHeight;
+                        pdf.addPage();
+                        pdf.addImage(extraImgData, 'JPEG', 0, position, imgWidth, extraImgHeight);
+                        heightLeft -= pdfHeight;
+                    }
+                } catch (error) {
+                    console.log('Could not load extracurriculars:', error);
+                }
+                
+                // Save PDF
                 pdf.save('Roni_Baker_Resume.pdf');
                 
                 // Reset button
@@ -591,7 +638,7 @@
                 
             } catch (error) {
                 console.error('Error generating PDF:', error);
-                alert('Error generating PDF. Please try again or use Print to PDF (Ctrl+P).');
+                alert('Error generating PDF: ' + error.message + '\n\nTry using your browser\'s Print to PDF feature (Ctrl+P or Cmd+P) instead.');
                 btn.innerHTML = originalText;
                 btn.disabled = false;
             }
