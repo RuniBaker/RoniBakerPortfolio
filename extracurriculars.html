@@ -244,6 +244,11 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#">Extracurriculars</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary btn-sm ms-2" id="downloadResumeBtn" style="background-color: #0071e3; border: none;">
+                            <i class="fas fa-download"></i> Download Resume
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -873,4 +878,30 @@
                     // Filter blog posts
                     blogPosts.forEach(post => {
                         if (filter === 'all' || post.getAttribute('data-categories').includes(filter)) {
-                            post.style.di
+                            post.style.display = '';
+                        } else {
+                            post.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    
+    <!-- Add jsPDF and html2canvas libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <script>
+        // PDF Download functionality - redirects to index.html to generate full resume
+        document.getElementById('downloadResumeBtn').addEventListener('click', function() {
+            // Redirect to index page which has the full PDF generation logic
+            window.location.href = 'index.html';
+            // After redirect, the user can click the download button there
+            setTimeout(() => {
+                alert('Please click the "Download Resume" button on the home page to generate your PDF.');
+            }, 500);
+        });
+    </script>
+</body>
+</html>

@@ -170,6 +170,11 @@
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="extracurriculars.html">Extracurriculars</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary btn-sm ms-2" id="downloadResumeBtn" style="background-color: #0071e3; border: none;">
+                            <i class="fas fa-download"></i> Download Resume
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -412,7 +417,7 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h5>Email</h5>
-                            <p>roni.baker@uwcmostar.ba</p>
+                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4d3f222324632f2c26283f0d383a2e20223e392c3f632f2c">[email&#160;protected]</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -440,7 +445,7 @@
             <p>All rights reserved: Roni (Runi) Baker</p>
         </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         $(document).ready(function(){
             $('.owl-carousel').owlCarousel({
                 loop: true,
@@ -464,10 +469,131 @@
         });
         document.addEventListener("scroll", function() {
             let section = document.getElementById("animated-section");
-            let position = section.getBoundingClientRect().top;
-            let windowHeight = window.innerHeight;
-            if (position < windowHeight - 50) {
+            let position = section.getBoundingClientRect();
+            if (position.top < window.innerHeight && position.bottom >= 0) {
                 section.classList.add("visible");
+            }
+        });
+    </script>
+    
+    <!-- Add jsPDF and html2canvas libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <script>
+        // PDF Download functionality using client-side generation
+        document.getElementById('downloadResumeBtn').addEventListener('click', async function() {
+            const btn = this;
+            const originalText = btn.innerHTML;
+            
+            // Show loading state
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating PDF...';
+            btn.disabled = true;
+            
+            try {
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF('p', 'mm', 'a4');
+                
+                // Get the main content areas
+                const mainContent = document.querySelector('body');
+                
+                // Create a temporary container for PDF content
+                const pdfContainer = document.createElement('div');
+                pdfContainer.style.width = '210mm';
+                pdfContainer.style.backgroundColor = 'white';
+                pdfContainer.style.padding = '10mm';
+                
+                // Clone the content
+                pdfContainer.innerHTML = mainContent.innerHTML;
+                
+                // Remove navigation
+                const nav = pdfContainer.querySelector('nav');
+                if (nav) nav.remove();
+                
+                // Remove the download button
+                const downloadBtn = pdfContainer.querySelector('#downloadResumeBtn');
+                if (downloadBtn) downloadBtn.closest('li').remove();
+                
+                // Add to document temporarily
+                pdfContainer.style.position = 'absolute';
+                pdfContainer.style.left = '-9999px';
+                document.body.appendChild(pdfContainer);
+                
+                // Convert to canvas
+                const canvas = await html2canvas(pdfContainer, {
+                    scale: 2,
+                    useCORS: true,
+                    logging: false,
+                    allowTaint: true
+                });
+                
+                // Remove temporary container
+                document.body.removeChild(pdfContainer);
+                
+                // Add to PDF
+                const imgData = canvas.toDataURL('image/jpeg', 1.0);
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const pdfHeight = pdf.internal.pageSize.getHeight();
+                const imgWidth = canvas.width;
+                const imgHeight = canvas.height;
+                const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+                
+                pdf.addImage(imgData, 'JPEG', 0, 0, imgWidth * ratio, imgHeight * ratio);
+                
+                // If we need to fetch extracurriculars page
+                try {
+                    const response = await fetch('extracurriculars.html');
+                    const html = await response.text();
+                    
+                    // Create container for extracurriculars
+                    const extraContainer = document.createElement('div');
+                    extraContainer.style.width = '210mm';
+                    extraContainer.style.backgroundColor = 'white';
+                    extraContainer.style.padding = '10mm';
+                    extraContainer.innerHTML = html;
+                    
+                    // Remove navigation from extracurriculars
+                    const extraNav = extraContainer.querySelector('nav');
+                    if (extraNav) extraNav.remove();
+                    
+                    // Add to document temporarily
+                    extraContainer.style.position = 'absolute';
+                    extraContainer.style.left = '-9999px';
+                    document.body.appendChild(extraContainer);
+                    
+                    // Convert to canvas
+                    const extraCanvas = await html2canvas(extraContainer, {
+                        scale: 2,
+                        useCORS: true,
+                        logging: false,
+                        allowTaint: true
+                    });
+                    
+                    // Remove temporary container
+                    document.body.removeChild(extraContainer);
+                    
+                    // Add new page
+                    pdf.addPage();
+                    
+                    const extraImgData = extraCanvas.toDataURL('image/jpeg', 1.0);
+                    pdf.addImage(extraImgData, 'JPEG', 0, 0, extraCanvas.width * ratio, extraCanvas.height * ratio);
+                    
+                } catch (extraError) {
+                    console.log('Could not load extracurriculars page:', extraError);
+                }
+                
+                // Save the PDF
+                pdf.save('Roni_Baker_Resume.pdf');
+                
+                // Reset button
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                
+            } catch (error) {
+                console.error('Error generating PDF:', error);
+                alert('Error generating PDF. Please try again or use Print to PDF (Ctrl+P).');
+                btn.innerHTML = originalText;
+                btn.disabled = false;
             }
         });
     </script>
